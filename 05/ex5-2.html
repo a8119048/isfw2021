@@ -48,6 +48,10 @@
         async function doTweets() {
             document.getElementById('result').innerHTML = '';
         }
+
+        $().ready(function () {
+            setInterval(doSelect, 2000);
+        });
     </script>
 
 </head>
