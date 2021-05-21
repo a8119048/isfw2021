@@ -18,14 +18,23 @@
             var username = sessionStorage.getItem('username');
             document.getElementById('welcome').innerHTML = 'ようこそ' + username + 'さん';
         }
+
+        function linkPressed() {
+            var userid = sessionStorage.getItem('userid');
+            var html = '';
+            html = 'update.html?userid=' + userid;
+            location.href = html;
+        }
+
     </script>
 
 </head>
 
 <body>
     <h1>ユーザトップ</h1>
-    <p id="welcome"></p>
+    <p id="welcome">xxxx</p>
     <hr>
+    <p onclick="linkPressed()"><a href="#">ユーザ情報変更</a></p>
 
 </body>
 
