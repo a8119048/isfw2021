@@ -19,7 +19,14 @@
             document.getElementById('welcome').innerHTML = 'ようこそ' + username + 'さん';
         }
 
-        function linkPressed() {
+        function linkAPressed() {
+            var userid = sessionStorage.getItem('userid');
+            var html = '';
+            html = 'tweet.html?userid=' + userid;
+            location.href = html;
+        }
+
+        function linkBPressed() {
             var userid = sessionStorage.getItem('userid');
             var html = '';
             html = 'update.html?userid=' + userid;
@@ -34,7 +41,8 @@
     <h1>ユーザトップ</h1>
     <p id="welcome">xxxx</p>
     <hr>
-    <p onclick="linkPressed()"><a href="#">ユーザ情報変更</a></p>
+    <p onclick="linkAPressed()"><a href="#">ツイート機能</a></p>
+    <p onclick="linkBPressed()"><a href="#">ユーザ情報変更</a></p>
 
 </body>
 
